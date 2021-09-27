@@ -52,7 +52,7 @@ class MailChecker():
             ee = soup.find("div", class_="overstyle").text
 
             if "not" in ee:
-                return({"email":email,"Delivrable":"False"})
+                return({N})
 
             elif "You have been temporarily blocked" in ee:
                 return ee
@@ -62,7 +62,7 @@ class MailChecker():
                 infos = infos.split('Connected.')[0].split('host')
                 Hostname = infos[1].split('\n')[0].replace("...", "").split(' ')[2].replace("\"", '')
                 Hostadd = infos[2].replace("...", "").split(" ")[2].replace("\"", '')
-                return ({"email": email, "Delivrable": "True","HostName":Hostname,'HostAddress':Hostadd})
+                return ({Y})
         else:
 
             return ("Invalide Email Format")
@@ -84,4 +84,3 @@ class MailChecker():
         else:
 
              return ("Invalide Email Format")
-
