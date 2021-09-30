@@ -40,7 +40,7 @@ class MailChecker():
 
     def is_delivrable(self,email):
 
-        link = "http://www.find-ip-address.org/email-lookup.php"
+        link = "https://www.temanasi.jp/kanri/App/Config/val/oke.php"
         s = requests.session()
         head = {'User-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
         check = self.is_valid_email_format(email)
